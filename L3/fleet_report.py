@@ -25,9 +25,11 @@ for ship in ships:
     status = overall_status(fuel, health)
     print(ship, fuel, health, status)
 
-    
-
-   
+    if status == "READY":
+        ready += 1
+    elif status == "GROUNDED":
+        grounded += 1
+    fuel_total += fuel
 
 print("READY:", ready)
 print("GROUNDED:", grounded)
